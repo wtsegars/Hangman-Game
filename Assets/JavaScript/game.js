@@ -22,8 +22,11 @@ document.onkeypress = function (event) {
             }
 
             if (numberOfLives === 0) {
-                var loserImg = document.createElement('IMG');
+                var loserImg = document.createElement('img');
                 loserImg.setAttribute('src', 'Assets/Images/2u2mf4.jpg');
+                if (event.key === 'spacebar') {
+                    location.reload;
+                }
             }
             if (numberOfLives > 0 && choosenMemeText === memeChoice) {
                 alert('Congraulations! You win!');
