@@ -11,9 +11,9 @@ memeChoice.textContent = choosenMemeText;
 numberOfLives.appendChild = numberOfGuessesLeft;
 document.onkeypress = function (event) {
     var userGuess = event.key; 
-    for (let i = 0; i < memeChoices.length; i++) {
-        for (let l = 0; l <= memeChoices[i].length; l++) {
-            if (userGuess === memeChoices[i][l]) {
+    for (let i = 0; i < memeChoice.length; i++) {
+        for (let l = 0; l <= memeChoice[i].length; l++) {
+            if (userGuess === memeChoice[i][l]) {
                 choosenMemeText.textContent = userGuess; 
             }
             else {
