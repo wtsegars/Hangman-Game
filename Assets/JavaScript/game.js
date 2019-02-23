@@ -1,4 +1,4 @@
-const memeChoices = ['Pepe The Frog', 'Harambe', 'Scumbag Steve', 'Bad Luck Brian', 'Change My Mind', 'Pedobear', 'Ultra Instinct Shaggy'];
+const memeChoices = ['pepe the frog', 'harambe', 'scumbag steve', 'bad luck brian', 'change my mind', 'pedobear', 'ultra instinct shaggy'];
 
 var numberOfLives = 6;
 
