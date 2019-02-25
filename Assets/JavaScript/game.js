@@ -1,7 +1,7 @@
-const memeChoices = ['pepe the frog', 'harambe', 'scumbag steve', 'bad luck brian', 'change my mind', 'pedobear', 'ultra instinct shaggy'];
+const memeChoices = ['pepethefrog', 'harambe', 'scumbagsteve', 'badluckbrian', 'changemymind', 'pedobear', 'ultrainstinctshaggy'];
 
 var numberOfLives = 6;
-
+var totalCorrectCounter = 0;
 var choosenMemeText = document.getElementById('choosen-name').textContent;
 var numberOfGuessesLeft = document.getElementById('guesses-left');
 var guessedLetters = document.getElementById('guessed-letters');
@@ -28,8 +28,9 @@ document.onkeypress = function (event) {
             const name = document.getElementById('choosen-name');
             hangman[i] = userGuess; 
             guess[i] = userGuess
+            totalCorrectCounter++;
             name.textContent = hangman.join('');
-            console.log(hangman);
+            console.log(totalCorrectCounter);
         }
 
         // If statement to determine if the userGuess matches memeChoice[i]
@@ -76,8 +77,11 @@ document.onkeypress = function (event) {
         numberOfGuessesLeft.textContent = numberOfLives;
         console.log(numberOfLives);
     }
-    if (numberOfLives > 0 && hangman.length === memeChoice) {
-        winCondition()
+
+    console.log(hangman.length);
+    console.log(memeChoice.length);
+    if (numberOfLives > 0 && totalCorrectCounter === memeChoice.length) {
+        winCondition();
     }
     if (numberOfLives === 0) {
         loseCondition();
@@ -86,37 +90,37 @@ document.onkeypress = function (event) {
         var winnerImg = document.getElementById('winner-image');
         alert('Congraulations! You win!');
         alert('Refresh the page to play again.');
-        if (memeChoice === 0) {
+        if (memeChoice === 'pepethefrog') {
             var pepe = winnerImg.setAttribute('src', 'Assets/Images/pepefroggie.jpg');
             winnerImg.appendChild(pepe);
             document.body.appendChild(winnerImg);
         }
-        else if (memeChoice === 1) {
+        else if (memeChoice === 'harambe') {
             var harambe = winnerImg.setAttribute('src', 'Assets/Images/d31/jpg');
             winnerImg.appendChild(harambe);
             document.body.appendChild(winnerImg);
         }
-        else if (memeChoice === 2) {
+        else if (memeChoice === 'scumbagsteve') {
             var scumbag = winnerImg.setAttribute('src', 'Assets/Images/c5b.jpg');
             winnerImg.appendChild(scumbag);
             document.body.appendChild(winnerImg);
         }
-        else if (memeChoice === 3) {
+        else if (memeChoice === 'badluckbrian') {
             var brian = winnerImg.setAttribute('src', 'Assets/Images/cab.png');
             winnerImg.appendChild(brian);
             document.body.appendChild(winnerImg);
         }
-        else if (memeChoice === 4) {
+        else if (memeChoice === 'changemymind') {
             var mind = winnerImg.setAttribute('src', 'Assets/Images/0cb.jpg');
             winnerImg.appendChild(mind);
             document.body.appendChild(winnerImg);
         }
-        else if (memeChoice === 5) {
+        else if (memeChoice === 'pedobear') {
             var pedobear = winnerImg.setAttribute('src', 'Assets/Images/PedoBear.jpg');
             winnerImg.appendChild(pedobear);
             document.body.appendChild(winnerImg);
         }
-        else if (memChoice === 6) {
+        else if (memeChoice === 'ultrainstictshaggy') {
             var shaggy = winnerImg.setAttribute('src', 'Assets/Images/271.jpg');
             winnerImg.appendChild(shaggy);
             document.body.appendChild(winnerImg);
