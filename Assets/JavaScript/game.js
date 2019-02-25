@@ -76,16 +76,57 @@ document.onkeypress = function (event) {
         numberOfGuessesLeft.textContent = numberOfLives;
         console.log(numberOfLives);
     }
+    if (numberOfLives > 0 && choosenMemeText === memeChoice) {
+        winCondition();
+    }
+    if (numberOfLives === 0) {
+        loseCondition();
+    }
+    function winCondition() {
+        var winnerImg = document.getElementById('winner-image');
+        alert('Congraulations! You win!');
+        alert('Refresh the page to play again.');
+        if (memeChoice === 0) {
+            var pepe = winnerImg.setAttribute('src', 'Assets/Images/pepefroggie.jpg');
+            winnerImg.appendChild(pepe);
+            document.body.appendChild(winnerImg);
+        }
+        else if (memeChoice === 1) {
+            var harambe = winnerImg.setAttribute('src', 'Assets/Images/d31/jpg');
+            winnerImg.appendChild(harambe);
+            document.body.appendChild(winnerImg);
+        }
+        else if (memeChoice === 2) {
+            var scumbag = winnerImg.setAttribute('src', 'Assets/Images/c5b.jpg');
+            winnerImg.appendChild(scumbag);
+            document.body.appendChild(winnerImg);
+        }
+        else if (memeChoice === 3) {
+            var brian = winnerImg.setAttribute('src', 'Assets/Images/cab.png');
+            winnerImg.appendChild(brian);
+            document.body.appendChild(winnerImg);
+        }
+        else if (memeChoice === 4) {
+            var mind = winnerImg.setAttribute('src', 'Assets/Images/0cb.jpg');
+            winnerImg.appendChild(mind);
+            document.body.appendChild(winnerImg);
+        }
+        else if (memeChoice === 5) {
+            var pedobear = winnerImg.setAttribute('src', 'Assets/Images/PedoBear.jpg');
+            winnerImg.appendChild(pedobear);
+            document.body.appendChild(winnerImg);
+        }
+        else if (memChoice === 6) {
+            var shaggy = winnerImg.setAttribute('src', 'Assets/Images/271.jpg');
+            winnerImg.appendChild(shaggy);
+            document.body.appendChild(winnerImg);
+        }
+    }
     function loseCondition() {
-        if (numberOfLives === 0) {
-            var loserImg = document.getElementById('loser-image');
-            var loserPic = loserImg.attr("src", "Assets/Images/2u2mf4.jpg");
+        var loserImg = document.getElementById('loser-image');
+        var loserPic = loserImg.setAttribute("src", "Assets/Images/2u2mf4.jpg");
             loserImg.appendChild(loserPic);
             document.body.appendChild(loserImg);
-            if (event.key === 'spacebar') {
-               location.reload;
-            }
-        }
     }
 };
 //var drinkOptions = document.getElementById('drink-options');
