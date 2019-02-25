@@ -76,8 +76,8 @@ document.onkeypress = function (event) {
         numberOfGuessesLeft.textContent = numberOfLives;
         console.log(numberOfLives);
     }
-    if (numberOfLives > 0 && choosenMemeText === memeChoice) {
-        winCondition();
+    if (numberOfLives > 0 && hangman.length === memeChoice) {
+        winCondition()
     }
     if (numberOfLives === 0) {
         loseCondition();
