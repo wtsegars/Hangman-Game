@@ -61,7 +61,7 @@ document.onkeypress = function (event) {
             document.body.appendChild(winnerImg);
         }
         else if (memeChoice === 'harambe') {
-            var harambe = winnerImg.setAttribute('src', 'Assets/Images/d31/jpg');
+            var harambe = winnerImg.setAttribute('src', 'Assets/Images/d31.jpg');
             winnerImg.appendChild(harambe);
             document.body.appendChild(winnerImg);
         }
