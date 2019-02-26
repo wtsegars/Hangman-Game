@@ -85,7 +85,7 @@ document.onkeypress = function (event) {
             winnerImg.appendChild(pedobear);
             document.body.appendChild(winnerImg);
         }
-        else if (memeChoice === 'ultrainstictshaggy') {
+        else if (memeChoice === 'ultrainstinctshaggy') {
             var shaggy = winnerImg.setAttribute('src', 'Assets/Images/271.jpg');
             winnerImg.appendChild(shaggy);
             document.body.appendChild(winnerImg);

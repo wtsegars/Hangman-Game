@@ -44,6 +44,7 @@ p {
     margin-top: -400px;
 }
 #loser-image {
-    position: relative;
-    margin-left: 75px;
+    position: fixed;
+    margin-left: 250px;
+    margin-bottom: 500px;
 }
